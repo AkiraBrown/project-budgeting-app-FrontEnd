@@ -2,6 +2,14 @@
 
 This is the <mark>Frontend</mark> of the Full Stack Budgeting App that allows the user to interact with the backend. This application has full CRUD methods with use of these routes:
 
+## Dev Instructions
+
+If running this locally, use <mark>npm start</mark> to start the frontend. However the backend has to be running locally as well in order to get the transaction data to appear. The frontend defaults to port 3000 and the backend defaults to port 3001.
+
+Both must be running in order to get the full application experience.
+
+To close the application use ctrl + c to close the port.
+
 ## Data Layout
 
 ```json
