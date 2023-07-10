@@ -42,12 +42,13 @@ function EditTransaction() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    let URL =
+      process.env.NODE_ENV === "production"
+        ? `https://budget-app-back-end-czu9.onrender.com/transactions/update-transactions/${id}`
+        : `http://localhost:3001/transactions/update-transactions/${id}`;
 
     try {
-      await axios.put(
-        `http://localhost:3001/transactions/update-transactions/${id}`,
-        transaction
-      );
+      await axios.put(URL, transaction);
       alert(`Successfully Updated`);
       navigate(`/transactions/${id}`);
     } catch (error) {
